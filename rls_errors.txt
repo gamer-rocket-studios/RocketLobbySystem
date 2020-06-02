@@ -1,0 +1,69 @@
+=== Error Code #1 - Error attempting to insert game value! ===
+[? RLS] Did you remember to add the game using "properties_insertGame()"
+
+As far as testing is concerned, the only way you can encounter this error is by failing to insert the
+game through the function mentioned in the ? prompt.
+
+
+
+=== Error Code #2 - Error attempting to insert default player value! ===
+[? RLS] Did you remember to add the game using "properties_insertGame()"
+
+As far as testing is concerned, the only way you can encounter this error is by failing to insert the
+game through the function mentioned in the ? prompt.
+
+
+
+=== Error Code #3 - Failed to get a game value! ===
+
+This error should only occur if the key you named does not exist. Your console should display some information that could be of use to you. It is formatted as this:
+Game type - Key name - Game id
+
+Make sure you didn't type the key name incorrectly in either the insert value function or the get value function. It is case sensitive!
+
+
+
+=== Error Code #4 - Failed to get player! ===
+[? RLS] Index out of bounds? Index starts at 0, max players is #
+
+If you are developing your bot using Lua, I suspect that's why you're here. If you are a new developer and are using lua, here's something interesting to learn.
+Most programming languages start their index at 0. Not at 1. So if you want to grab the first index of your player list you pass in 0, not 1.
+
+If you are not developing your bot in lua, you are likely going outside the bounds of the player list. The error message provides information that should be helpful to you.
+It provides Game type - Player number that was requested - Game id
+
+I'd check and make sure your player number requested isn't ouside of the bounds that the ? prompt displays.
+
+
+
+=== Error Code #5 - There was an error attempting to retrieve a user value! ===
+[? RLS] Did you mean to use "user_getString()"?
+
+If the ? prompt is not helpful to you, there's another possible outcome for this error.
+Did you remember to insert the user using user_insertUser()? If you don't insert the user, they won't exist in the user list!
+
+I would also make sure to check your spelling/capitialization of the key you requested. It is case sensitive. The error should provide the key you requested.
+
+
+
+=== Error Code #6 - There was an error attempting to retrieve a user string! ===
+[? RLS] Did you mean to use "user_getValue()"?
+
+If the ? prompt is not helpful to you, there's another possible outcome for this error.
+Did you remember to insert the user using user_insertUser()? If you don't insert the user, they won't exist in the user list!
+
+I would also make sure to check your spelling/capitialization of the key you requested. It is case sensitive. The error should provide the key you requested.
+
+
+
+=== Error Code #7 - Failed to load database information! ===
+
+Make sure your file path is correct! If you are running linux, you may have to specify the EXACT full directory/filepath. Also make sure the file's first
+character is lowercase. Lastly, make sure you did NOT add an extension to your saved filepath when you called the function that saves your database. Aka, no
+.txt or .rtf or etc., no extensions, just the file name.
+
+
+
+=== Error Code #8 - User doesn't exist! ===
+
+Did you remember to insert the user using user_insertUser()? If you don't insert the user, they won't exist in the user list!

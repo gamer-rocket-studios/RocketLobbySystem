@@ -1,0 +1,44 @@
+============== Version 1.0 - June 2nd, 2020 ==============
+
++Added system functions:
+
+extern "C" ROCKETLOBBYSYSTEM_API void system_startRocketLobbySystem(char* loadPath, char* nullStr);
+extern "C" ROCKETLOBBYSYSTEM_API void system_stopRocketLobbySystem();
+extern "C" ROCKETLOBBYSYSTEM_API void system_displayData(int indent, char whitespaceChar);
+extern "C" ROCKETLOBBYSYSTEM_API void system_saveData(char* savePath);
+extern "C" ROCKETLOBBYSYSTEM_API bool system_causedErrorCode();
+extern "C" ROCKETLOBBYSYSTEM_API bool system_rocketLobbySystemIsRunning();
+
+
++Added handler functions:
+
+extern "C" ROCKETLOBBYSYSTEM_API void input_addInput(unsigned long long id, char input);
+extern "C" ROCKETLOBBYSYSTEM_API char input_getInput(unsigned long long id);
+
+
++Added essentials functions:
+
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertGame(char* gameName, unsigned short maxPlayers, bool isSinglePlayer);
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertGameValue(char* gameName, char* valueName, long defaultValue);
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertPlayerDefaultValue(char* gameName, char* valueName, long defaultValue);
+extern "C" ROCKETLOBBYSYSTEM_API bool game_pollGame(char* gameName);
+extern "C" ROCKETLOBBYSYSTEM_API unsigned long long game_getPlayer(unsigned short playerNumber);
+extern "C" ROCKETLOBBYSYSTEM_API long game_getGameValue(char* key);
+extern "C" ROCKETLOBBYSYSTEM_API void game_insertGameValue(char* key, long value);
+extern "C" ROCKETLOBBYSYSTEM_API void game_endGame(char* gameEndedMessage, char* nullStr);
+extern "C" ROCKETLOBBYSYSTEM_API void lobby_addUser(unsigned long long id, char* game, char* nullString);
+extern "C" ROCKETLOBBYSYSTEM_API void lobby_handleJoinQueue();
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertUser(unsigned long long id);
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertValue(unsigned long long id, char* key, long value);
+extern "C" ROCKETLOBBYSYSTEM_API long user_getValue(unsigned long long id, char* key);
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertString(unsigned long long id, char* key, char* value);
+extern "C" ROCKETLOBBYSYSTEM_API const char* user_getString(unsigned long long id, char* key);
+extern "C" ROCKETLOBBYSYSTEM_API bool user_containsKey(unsigned long long id, char* key);
+
+
++Added display functions:
+
+extern "C" ROCKETLOBBYSYSTEM_API void message_addToQueue(unsigned long long id, char* message, char* nullStr);
+extern "C" ROCKETLOBBYSYSTEM_API bool message_pollMessage();
+extern "C" ROCKETLOBBYSYSTEM_API unsigned long long message_polledMessageID();
+extern "C" ROCKETLOBBYSYSTEM_API char* message_polledMessageContents();

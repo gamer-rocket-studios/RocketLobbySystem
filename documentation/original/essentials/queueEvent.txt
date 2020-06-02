@@ -1,0 +1,16 @@
+extern char* defaultString;
+
+class QueueEvent
+{
+	bool valid = false;
+
+public:
+
+	unsigned long long id;
+	char* eventInfo;
+
+	bool isValid();
+	QueueEvent(unsigned long long id, char* eventInfo, char* nullString);
+	QueueEvent(char* eventInfo = defaultString);
+
+};

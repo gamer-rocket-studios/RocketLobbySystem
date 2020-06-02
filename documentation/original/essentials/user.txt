@@ -1,0 +1,8 @@
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertUser(unsigned long long id);
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertValue(unsigned long long id, char* key, long value);
+extern "C" ROCKETLOBBYSYSTEM_API long user_getValue(unsigned long long id, char* key);
+
+extern "C" ROCKETLOBBYSYSTEM_API void user_insertString(unsigned long long id, char* key, char* value);
+extern "C" ROCKETLOBBYSYSTEM_API const char* user_getString(unsigned long long id, char* key);
+
+extern "C" ROCKETLOBBYSYSTEM_API bool user_containsKey(unsigned long long id, char* key);

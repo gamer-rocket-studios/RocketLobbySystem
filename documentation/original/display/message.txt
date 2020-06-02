@@ -1,0 +1,4 @@
+extern "C" ROCKETLOBBYSYSTEM_API void message_addToQueue(unsigned long long id, char* message, char* nullStr);
+extern "C" ROCKETLOBBYSYSTEM_API bool message_pollMessage();
+extern "C" ROCKETLOBBYSYSTEM_API unsigned long long message_polledMessageID();
+extern "C" ROCKETLOBBYSYSTEM_API char* message_polledMessageContents();

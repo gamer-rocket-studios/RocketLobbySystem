@@ -1,0 +1,2 @@
+extern "C" ROCKETLOBBYSYSTEM_API void lobby_addUser(unsigned long long id, char* game, char* nullString);
+extern "C" ROCKETLOBBYSYSTEM_API void lobby_handleJoinQueue();

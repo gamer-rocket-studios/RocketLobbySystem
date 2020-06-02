@@ -1,0 +1,18 @@
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertGame(char* gameName, unsigned short maxPlayers, bool isSinglePlayer);
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertGameValue(char* gameName, char* valueName, long defaultValue);
+extern "C" ROCKETLOBBYSYSTEM_API void properties_insertPlayerDefaultValue(char* gameName, char* valueName, long defaultValue);
+
+auto& internal_getGameValues(char* gameName);
+auto& internal_getPlayerValues(char* gameName);
+auto& internal_getPlayers(char* gameName, const std::string& gameID);
+
+void internal_addPlayer(QueueEvent*& e);
+void internal_updatePlayer(char* game, const std::string& id);
+
+extern "C" ROCKETLOBBYSYSTEM_API bool game_pollGame(char* gameName);
+extern "C" ROCKETLOBBYSYSTEM_API unsigned long long game_getPlayer(unsigned short playerNumber);
+
+extern "C" ROCKETLOBBYSYSTEM_API long game_getGameValue(char* key);
+extern "C" ROCKETLOBBYSYSTEM_API void game_insertGameValue(char* key, long value);
+
+extern "C" ROCKETLOBBYSYSTEM_API void game_endGame(char* gameEndedMessage, char* nullStr);

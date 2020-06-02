@@ -1,0 +1,20 @@
+Rocket Lobby System was written by Dustin Priest, or by handle name "Rocket" (or "Gamer Rocket" at one point in the past).
+
+This technology has been worked on for well over a year and has seen many revisions and improvements. It started as a library written for the JDA (Java Discord API).
+A great friend of mine came up with the idea of making a library that was bindable to all languages so all api's could benefit with this technology. And I liked the idea.
+
+
+For visual aid, or help to get this system set up, simply follow this link to a youtube playlist that contains the help you may be seeking:
+https://www.youtube.com/playlist?list=PLJwN7VzeXP58gm2a0x1qkeOR74e1LrtQw
+
+
+For requests, ideas, bug reports, or assistance, here is our business email:
+gamerrocketstudios@gmail.com
+
+
+
+
+
+
+You are running version 1.0. To be notified of new updates, please join this discord channel:
+https://discord.gg/reZ3xwt

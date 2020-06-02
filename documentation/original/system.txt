@@ -1,0 +1,8 @@
+extern "C" ROCKETLOBBYSYSTEM_API void system_startRocketLobbySystem(char* loadPath, char* nullStr);
+extern "C" ROCKETLOBBYSYSTEM_API void system_stopRocketLobbySystem();
+
+extern "C" ROCKETLOBBYSYSTEM_API void system_displayData(int indent, char whitespaceChar);
+extern "C" ROCKETLOBBYSYSTEM_API void system_saveData(char* savePath);
+
+extern "C" ROCKETLOBBYSYSTEM_API bool system_causedErrorCode();
+extern "C" ROCKETLOBBYSYSTEM_API bool system_rocketLobbySystemIsRunning();

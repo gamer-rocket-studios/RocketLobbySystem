@@ -1,0 +1,4 @@
+extern "C" ROCKETLOBBYSYSTEM_API void input_addInput(unsigned long long id, char input);
+extern "C" ROCKETLOBBYSYSTEM_API char input_getInput(unsigned long long id);
+
+char internal_input_getInput(const std::string& id);
